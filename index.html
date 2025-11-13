@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Detector de Gestos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 Robot Detector de Gestos</h1>
+        
+        <div class="content-wrapper">
+            <!-- Cámara a la izquierda -->
+            <div id="webcam-container"></div>
+            
+            <!-- Robot a la derecha -->
+            <div class="robot-wrapper">
+                <div class="robot-container">
+                    <!-- Cabeza -->
+                    <div class="robot-head">
+                        <div class="robot-antenna"></div>
+                        <div class="robot-eye left"></div>
+                        <div class="robot-eye right"></div>
+                        <div class="robot-mouth"></div>
+                    </div>
+
+                    <!-- Cuerpo -->
+                    <div class="robot-body">
+                        <div class="robot-panel">
+                            <div class="robot-light"></div>
+                            <div class="robot-light"></div>
+                            <div class="robot-light"></div>
+                            <div class="robot-light"></div>
+                        </div>
+                    </div>
+
+                    <!-- Brazos -->
+                    <div class="robot-arm left" id="leftArm">
+                        <div class="robot-hand"></div>
+                    </div>
+                    <div class="robot-arm right" id="rightArm">
+                        <div class="robot-hand"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detection-info">
+            <h2>Gesto Detectado:</h2>
+            <div class="gesture-text" id="gestureText">Esperando...</div>
+            <div class="status" id="status">Inicializando cámara...</div>
+        </div>
+    </div>
+
+    <!-- TensorFlow.js y Teachable Machine POSE -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
