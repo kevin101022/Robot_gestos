@@ -307,11 +307,68 @@ h1 {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-    h1 { font-size: 2rem; }
-    .robot-container { transform: scale(0.8); }
+@media (max-width: 1024px) {
     .content-wrapper {
         flex-direction: column;
         gap: 30px;
+    }
+    
+    #webcam-container canvas {
+        max-width: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 { 
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    
+    .robot-container { 
+        transform: scale(0.75);
+    }
+    
+    #webcam-container canvas {
+        max-width: 300px;
+    }
+    
+    .detection-info {
+        padding: 15px 30px;
+        max-width: 350px;
+    }
+    
+    .gesture-text {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { 
+        font-size: 1.5rem;
+    }
+    
+    .robot-container { 
+        transform: scale(0.6);
+    }
+    
+    #webcam-container canvas {
+        max-width: 250px;
+    }
+    
+    .detection-info {
+        padding: 15px 20px;
+        max-width: 280px;
+    }
+    
+    .detection-info h2 {
+        font-size: 1rem;
+    }
+    
+    .gesture-text {
+        font-size: 1.3rem;
+    }
+    
+    .content-wrapper {
+        gap: 20px;
     }
 }
